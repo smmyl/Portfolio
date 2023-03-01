@@ -1,23 +1,38 @@
 $(() => {
     const $nav = $('.nav')
-    const $btn = $('.icon')
-    const $btn2 = $('.icon-2')
-    
+    const $hambtn = $('#hamburger-btn')
+    const $hambtn2 = $('#hamburger-btn2')
+    const $nightbtn = $('#night-btn')
+    const $lightbtn = $('#light-btn')
+
     const showNav = () => {
-        $nav.show()
-        $btn.hide()
-        $btn2.show()
+        $nav.slideDown()
+        $hambtn.hide()
+        $hambtn2.show()
     }
     const hideNav = () => {
-        $nav.hide()
-        $btn2.hide()
-        $btn.show()
+        $nav.slideUp()
+        $hambtn2.hide()
+        $hambtn.show()
+    }
+
+    const lightShow = () => {
+        $nightbtn.hide()
+        $lightbtn.show()
+    }
+
+    const nightShow = () => {
+        $nightbtn.show()
+        $lightbtn.hide()
     }
 
     $nav.hide()
-    $btn2.hide()
+    $hambtn2.hide()
+    $lightbtn.hide()
 
-    $btn.on('click', showNav)
-    $btn2.on('click', hideNav)
+    $hambtn.on('click', showNav)
+    $hambtn2.on('click', hideNav)
+    $nightbtn.on('click', lightShow)
+    $lightbtn.on('click', nightShow)
 
 })
