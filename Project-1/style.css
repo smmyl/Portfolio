@@ -1,7 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dosis&display=swap');
 body {
     background-color: tan;
     font-family: 'Bebas Neue', cursive;
+}
+
+div.header h1{
+    font-size: 50px;
+}
+
+#header {
+    width: 100%;
 }
 
 #navigation-bar {
@@ -14,6 +22,7 @@ body {
     list-style-type: none;
     display: block;
     border-radius: 10px;
+    font-size: 1.2em;
 }
 
 .nav:hover {
@@ -21,13 +30,28 @@ body {
     cursor: pointer;
 }
 
+#line-break {
+    background-color: black;
+}
+
+#line-break2 {
+    background-color: black;
+}
+
+#line-break:hover {
+    cursor: auto;
+}
+
+#line-break2:hover {
+    cursor: auto;
+}
 .icon {
-    right: 39%;
-    top: 1.5em;
+    right: 35%;
+    top: 3em;
     display: block;
-    position: absolute;
     width: 30px;
     height: 30px;
+    position: absolute;
 }
 
 .icon:hover {
@@ -36,7 +60,7 @@ body {
 
 .icon-2 {
     right: 5%;
-    top: 1.5em;
+    top: 3em;
     display: block;
     position: absolute;
     width: 30px;
@@ -52,9 +76,19 @@ body {
     height: 30px;
 }
 
+#hamburger:hover {
+    width: 35px;
+    height: 35px;
+}
+
 #hamburger-2 {
     width: 30px;
     height: 30px;
+}
+
+#hamburger-2:hover {
+    width: 35px;
+    height: 35px;
 }
 
 #night-mode {
@@ -81,7 +115,7 @@ h1 {
     text-align: center;
 }
 
-#home-body {
+#home-page {
    display: flex;
    flex-direction: column; 
 }
@@ -105,7 +139,6 @@ h1 {
 }
 
 #profile-pic {
-    position: fixed;
     height: 218px;
     margin: -10px 0 0 20px;
     border-radius: 10px;
@@ -139,4 +172,173 @@ h1 {
 #home-description {
     width: 100%;
     height: 400px;
+}
+
+#resume-page {
+    margin-left: 40px;
+}
+
+.resumeh3 {
+    text-align: center;
+}
+
+.resumeh2 {
+    animation: 1s ease-out slideInLeft
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.resumep {
+    margin-left: 50px;
+    font-family: 'Dosis', sans-serif;
+    animation: 2s ease-out slideInDown
+}
+
+
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#skills-page {
+    margin-left: 50px;
+}
+
+.bar-border {
+    width: 60%;
+    height: 1em;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-left: 30px;
+}
+
+.bar {
+    height: 1em;
+    border-radius: 10px;
+    background-color: rgb(109, 73, 29);
+    width: 50%;
+    text-align: center;
+}
+
+#bar-HTML {
+    width: 60%;
+    animation: 2s ease-out slideInLeftHTML;
+}
+
+@keyframes slideInLeftHTML {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 60%;
+    }
+}
+
+#bar-CSS {
+    width: 50%;
+    animation: 2s ease-out slideInLeftCSS;
+}
+
+@keyframes slideInLeftCSS {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 50%;
+    }
+}
+
+#bar-JS {
+    width: 50%;
+    animation: 2s ease-out slideInLeftJS;
+}
+
+@keyframes slideInLeftJS {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 50%;
+    }
+}
+
+#bar-jQ {
+    width: 60%;
+    animation: 2s ease-out slideInLeftjQ;
+}
+
+@keyframes slideInLeftjQ {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 60%;
+    }
+}
+
+#bar-p {
+    width: 5%;
+    animation: 2s ease-out slideInLeftp;
+}
+
+@keyframes slideInLeftp {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 5%;
+    }
+}
+
+#bar-c {
+    width: 80%;
+    animation: 2s ease-out slideInLeftc;
+}
+
+@keyframes slideInLeftc {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+#bar-s {
+    width: 90%;
+    animation: 2s ease-out slideInLefts;
+}
+
+@keyframes slideInLefts {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+#bar-t {
+    width: 100%;
+    animation: 2s ease-out slideInLeftt;
+}
+
+@keyframes slideInLeftt {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
 }
