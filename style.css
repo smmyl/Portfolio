@@ -4,13 +4,19 @@ body {
     font-family: 'Bebas Neue', cursive;
 }
 
+.website {
+    display:flex;
+    flex-direction: row;
+}
+
 div.header h1{
     font-size: 50px;
     background-color: rgba(255, 255, 255, 0.420);
     border-radius: 30px;
+    text-align: center;
 }
 
-#header {
+.header {
     width: 100%;
 }
 
@@ -130,10 +136,6 @@ div.header h1{
     height: 35px;
 }
 
-h1 {
-    text-align: center;
-}
-
 div#skills-page h1{
     text-align: left;
 }
@@ -156,7 +158,6 @@ div#skills-page h1{
 #home-picture {
     width: 30%;
     height: 200px;
-    
 }
 
 #profile-pic {
@@ -179,19 +180,20 @@ div#skills-page h1{
 
 #home-links {
     display: flex;
+    flex-wrap: wrap;
     width: 70%;
     height: 30px;
 }
 
 .icon-links {
-    width: 30px;
-    height: 30px;
+    width: 50px;
     padding: 30px;
+    margin-top: 20%;
 }
 
 .icon-links:hover {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
 }
 
 #home-bot-div {
@@ -421,16 +423,16 @@ div.footer p {
 }
 
 .project-pic {
-    width: 550px;
-    height: 600px;
+    width: 60%;
     border-radius: 10px;
     border: 10px solid rgba(255, 255, 255, 0.420);
+    margin: 0px 25% 0px 20%;
 }
 
 #carousel-btn {
     width: 60px;
     height: 60px;
-    margin: 250px 50px 50px 50px;
+    margin: 150px 50px 50px 50px;
 }
 
 #carousel-btn:hover {
@@ -440,13 +442,83 @@ div.footer p {
 #carousel-btn2 {
     width: 60px;
     height: 60px;
-    margin: 250px 50px 50px 50px;
+    margin: 150px 50px 50px 50px;
 }
 
 #carousel-btn2:hover {
     cursor: pointer;
 }
 
+div.carousel h1 {
+    text-align: center;
+}
+
 .dark-mode {
-    background: green;
+    background: rgb(95, 58, 11);
+    color: rgba(255, 255, 255, 0.6);
+
+}
+
+@media screen and (max-width: 850px) {
+    .icon {
+        right: 20%;
+        top: 3em;
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+    }
+
+    #home-top-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .icon-links {
+        width: 30px;
+        padding: 10px;
+        margin-top: 20%;
+    }
+
+    .icon-links:hover {
+        width: 35px;
+        height: 35px;
+    }
+
+    #home-links {
+        margin-left: 18%;
+        display: flex;
+        width: 70%;
+        height: 30px;
+    }
+
+    .home-div {
+        margin-left: 20%;
+    }
+
+    .pageskills{
+        width: 25%;
+    }
+    
+    div#resume-page h2 {
+        width: 23%;
+    }
+
+    #carousel-btn {
+        width: 30px;
+        height: 30px;
+        margin: 125px 50px 50px 50px;
+    }
+    
+    #carousel-btn2 {
+        width: 30px;
+        height: 30px;
+        margin: 125px 50px 50px 50px;
+    }
+
+    .project-pic {
+        width: 300px;
+        margin: 0 auto;
+    }
+    
 }

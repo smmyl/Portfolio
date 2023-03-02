@@ -46,7 +46,7 @@ $(() => {
         $homePage.fadeIn()
         $resumePage.fadeOut()
         $skillsPage.fadeOut()
-        $projectsPage.faceOut()
+        $projectsPage.fadeOut()
     }
     
     const resume = () => {
@@ -128,7 +128,5 @@ $(() => {
     $carouselLeft.on('click', carouselLeft)
     $nightButton.on('click', nightMode)
     $lightButton.on('click', lightMode)
-
-    console.log($('body').attr('class'))
 })
 
