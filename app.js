@@ -5,14 +5,21 @@ $(() => {
     const $nightbtn = $('#night-btn')
     const $lightbtn = $('#light-btn')
     const $home = $('#home')
-    const $homepage = $('#home-page')
+    const $homePage = $('#home-page')
     const $resume = $('#resume')
     const $resumePage = $('#resume-page')
     const $skills = $('#skills')
     const $skillsPage = $('#skills-page')
     const $projects = $('#projects')
     const $projectsPage = $('#projects-page')
-    const $resumeP = $('.resumep')
+    const $project1 = $('#carousel-1')
+    const $project2 = $('#carousel-2')
+    const $project3 = $('#carousel-3')
+    const $carouselLeft = $('#carousel-btn')
+    const $carouselRight = $('#carousel-btn2')
+    const $nightButton = $('#night-mode')
+    const $lightButton = $('#light-mode')
+
 
     const showNav = () => {
         $nav.slideDown()
@@ -36,31 +43,65 @@ $(() => {
     }
 
     const home = () => {
-        $homepage.fadeIn()
+        $homePage.fadeIn()
         $resumePage.fadeOut()
         $skillsPage.fadeOut()
         $projectsPage.faceOut()
     }
     
     const resume = () => {
-        $homepage.fadeOut()
+        $homePage.fadeOut()
         $resumePage.fadeIn()
         $skillsPage.fadeOut()
-        $projectsPage.faceOut()
+        $projectsPage.fadeOut()
     }
 
     const skills = () => {
-        $homepage.fadeOut()
+        $homePage.fadeOut()
         $resumePage.fadeOut()
         $skillsPage.fadeIn()
-        $projectsPage.faceOut()
+        $projectsPage.fadeOut()
     }
 
-    const projects= () => {
-        $homepage.fadeOut()
+    const projects = () => {
+        $homePage.fadeOut()
         $resumePage.fadeOut()
         $skillsPage.fadeOut()
-        $projectsPage.faceIn()
+        $projectsPage.fadeIn()
+    }
+
+    const carouselRight = () => {
+        if ($project1.css('display') == 'none' && $project2.css('display') == 'block') {
+            $project3.fadeIn()
+            $project2.fadeOut()
+        } else if ($project2.css('display') == 'none' && $project3.css('display') == 'block') {
+            $project1.fadeIn()
+            $project3.fadeOut()
+        } else if ($project3.css('display') == 'none' && $project1.css('display') == 'block') {
+            $project2.fadeIn()
+            $project1.fadeOut()
+        } else {}
+    }
+
+    const carouselLeft = () => {
+        if ($project1.css('display') == 'none' && $project2.css('display') == 'block') {
+            $project1.fadeIn()
+            $project2.fadeOut()
+        } else if ($project2.css('display') == 'none' && $project3.css('display') == 'block') {
+            $project2.fadeIn()
+            $project3.fadeOut()
+        } else if ($project3.css('display') == 'none' && $project1.css('display') == 'block') {
+            $project3.fadeIn()
+            $project1.fadeOut()
+        } else {}
+    }
+
+    const nightMode = () => {
+        $('body').addClass('dark-mode')
+    }
+
+    const lightMode = () => {
+        $('body').removeClass()    
     }
 
     $nav.hide()
@@ -71,6 +112,9 @@ $(() => {
     $projects.hide()
     $skillsPage.hide()
     $projectsPage.hide()
+    $project2.hide()
+    $project3.hide()
+
 
     $hambtn.on('click', showNav)
     $hambtn2.on('click', hideNav)
@@ -80,4 +124,11 @@ $(() => {
     $resume.on('click', resume)
     $skills.on('click', skills)
     $projects.on('click', projects)
+    $carouselRight.on('click', carouselRight)
+    $carouselLeft.on('click', carouselLeft)
+    $nightButton.on('click', nightMode)
+    $lightButton.on('click', lightMode)
+
+    console.log($('body').attr('class'))
 })
+
