@@ -290,7 +290,7 @@ div#resume-page h2 {
 }
 
 #bar-HTML {
-    width: 100%;
+    width: 90%;
     animation: 2s ease-out slideInLeftHTML;
 }
 
@@ -299,12 +299,12 @@ div#resume-page h2 {
         width: 0%;
     }
     100% {
-        width: 60%;
+        width: 90%;
     }
 }
 
 #bar-CSS {
-    width: 50%;
+    width: 85%;
     animation: 2s ease-out slideInLeftCSS;
 }
 
@@ -313,12 +313,12 @@ div#resume-page h2 {
         width: 0%;
     }
     100% {
-        width: 50%;
+        width: 85%;
     }
 }
 
 #bar-JS {
-    width: 50%;
+    width: 85%;
     animation: 2s ease-out slideInLeftJS;
 }
 
@@ -327,12 +327,26 @@ div#resume-page h2 {
         width: 0%;
     }
     100% {
-        width: 50%;
+        width: 85%;
+    }
+}
+
+#bar-react {
+    width: 80%;
+    animation: 2s ease-out slideInLeftReact;
+}
+
+@keyframes slideInLeftReact {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 80%;
     }
 }
 
 #bar-jQ {
-    width: 60%;
+    width: 70%;
     animation: 2s ease-out slideInLeftjQ;
 }
 
@@ -341,12 +355,12 @@ div#resume-page h2 {
         width: 0%;
     }
     100% {
-        width: 60%;
+        width: 70%;
     }
 }
 
 #bar-p {
-    width: 5%;
+    width: 40%;
     animation: 2s ease-out slideInLeftp;
 }
 
@@ -355,12 +369,12 @@ div#resume-page h2 {
         width: 0%;
     }
     100% {
-        width: 5%;
+        width: 40%;
     }
 }
 
 #bar-c {
-    width: 80%;
+    width: 90%;
     animation: 2s ease-out slideInLeftc;
 }
 
@@ -369,7 +383,7 @@ div#resume-page h2 {
         width: 0%;
     }
     100% {
-        width: 80%;
+        width: 90%;
     }
 }
 
