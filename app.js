@@ -15,6 +15,7 @@ $(() => {
     const $project1 = $('#carousel-1')
     const $project2 = $('#carousel-2')
     const $project3 = $('#carousel-3')
+    const $project4 = $('#carousel-4')
     const $carouselLeft = $('#carousel-btn')
     const $carouselRight = $('#carousel-btn2')
     const $nightButton = $('#night-mode')
@@ -75,9 +76,12 @@ $(() => {
             $project3.fadeIn()
             $project2.fadeOut()
         } else if ($project2.css('display') == 'none' && $project3.css('display') == 'block') {
-            $project1.fadeIn()
+            $project4.fadeIn()
             $project3.fadeOut()
-        } else if ($project3.css('display') == 'none' && $project1.css('display') == 'block') {
+        } else if ($project3.css('display') == 'none' && $project4.css('display') == 'block') {
+            $project1.fadeIn()
+            $project4.fadeOut()
+        } else if ($project4.css('display') == 'none' && $project1.css('display') == 'block') {
             $project2.fadeIn()
             $project1.fadeOut()
         } else {}
@@ -90,8 +94,11 @@ $(() => {
         } else if ($project2.css('display') == 'none' && $project3.css('display') == 'block') {
             $project2.fadeIn()
             $project3.fadeOut()
-        } else if ($project3.css('display') == 'none' && $project1.css('display') == 'block') {
+        } else if ($project3.css('display') == 'none' && $project4.css('display') == 'block') {
             $project3.fadeIn()
+            $project4.fadeOut()
+        } else if ($project4.css('display') == 'none' && $project1.css('display') == 'block') {
+            $project4.fadeIn()
             $project1.fadeOut()
         } else {}
     }
@@ -114,6 +121,7 @@ $(() => {
     $projectsPage.hide()
     $project2.hide()
     $project3.hide()
+    $project4.hide()
 
 
     $hambtn.on('click', showNav)
