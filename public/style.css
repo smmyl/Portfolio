@@ -36,6 +36,7 @@ div.header h1{
 #projects:hover {
     background-color: rgb(146, 25, 25);
     cursor: pointer;
+    
 }
 
 #home:hover {
@@ -289,7 +290,7 @@ div#resume-page h2 {
 }
 
 #bar-HTML {
-    width: 60%;
+    width: 100%;
     animation: 2s ease-out slideInLeftHTML;
 }
 
